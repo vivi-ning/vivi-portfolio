@@ -1,0 +1,35 @@
+/* Alimama FangYuanTi VF, copyright Alimama. Official font, stored unchanged. */
+@font-face {
+  font-family: "Alimama FangYuanTi VF";
+  src: url("assets/fonts/AlimamaFangYuanTiVF-Thin.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+:root {
+  font-family: "Alimama FangYuanTi VF", -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+button, input, select, textarea { font-family: inherit; }
+
+/* Lighter Chinese display titles; retain the opening English headline. */
+.section-heading h2,
+.statement h2,
+.contact-band h2,
+.gallery-heading h2,
+.about-content h2,
+.capabilities h2 {
+  font-weight: 350;
+  line-height: 1.35;
+}
+.page-heading h1,
+.project-intro h1,
+.about-intro h1,
+.contact-page h1 {
+  font-weight: 400;
+}
+.card-info h3,
+.note-block h2,
+.capability-grid h3,
+.next-project h2 {
+  font-weight: 400;
+}

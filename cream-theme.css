@@ -1,0 +1,42 @@
+:root{--ink:#272625;--muted:#706f6e;--soft:#f6f5f4;--line:#e9e8e7;--blue:#b94d21;background:#fbfaf9}
+body{background:#fbfaf9;color:var(--ink)}
+::selection{background:#f4c5a8;color:#272625}
+.site-header{background:#fbfaf9e6;border-bottom-color:#ebeae973}
+.site-header nav a{color:#706f6e}.site-header nav a:hover,.site-header nav a[aria-current=page]{color:#b94d21}
+.site-header nav .nav-contact{background:#2d2c2b;color:#fff9ef}.site-header nav .nav-contact:hover{background:#bc5429;color:#fff9ef}
+.button{background:#c5592b;color:#fffaf1;box-shadow:0 5px 12px #b36d3e14}.button:hover{background:#ab431d}
+.button.secondary{background:#f3f2f1;color:#373635}.button.secondary:hover{background:#eeedec}
+.text-link{color:#b94d21}.filter{background:#f5f4f3}.filter:hover{background:#efeeed}.filter.active{background:#2d2c2b;color:#fffaf0}
+.card-media,.archive-section .card-media,.gallery-button,.contact-card{background:#f6f5f4}
+.card-arrow{background:#fffaf0;color:#a74c25}.project-cover{background:#f4f3f2}
+.contact-band,.capabilities{background:#f6f5f4}.contact-band h2,.page-heading h1,.about-content h2,.contact-page h1{color:#2d2c2b}
+.contact-card{border:1px solid #fffcf5;box-shadow:8px 8px 24px #c1c0bf33,-8px -8px 24px #fffdf7}
+.footer-bottom{border-top-color:#ebeae9}
+.keyboard-home{--matte:#f7f6f5;--matte-ink:#2e2d2c;--matte-muted:#777675;--raised:9px 9px 24px #bab9b84a,-9px -9px 24px #fffdf7df}
+.keyboard-home .profile-dot{background:#d77743;box-shadow:0 0 0 4px #fff8eb80}
+.keyboard-home .identity-rule{background:#d18a61}
+.keyboard-home .profile-actions .text-link{color:#b45128}
+.keyboard-home .hero-nav>a:last-child{color:#a54e2a;background:#f6f5f4;border-color:#fffaf0}
+.keyboard-home .capability-tabs>button[aria-selected=true]{color:#9e4924;background:#f3f2f1;border-color:#d1d0cf;box-shadow:inset 4px 4px 8px #b8b7b670,inset -4px -4px 8px #fffaf1d9}
+.keyboard-home .capability-tabs>button:hover{color:#a94b23}
+.keyboard-home .profile-facts>div>p{color:#393837}
+.keyboard-home .home-contact-inner>.button{color:#a24920;background:#f1e5d6;border-color:#fff9ed;box-shadow:6px 6px 15px #b5b4b370,-6px -6px 15px #fffdf7df}
+.keyboard-home .feature-showcase[data-cover-kind="concept"] .feature-shade{background:linear-gradient(90deg,#181716b8 0%,#1817166b 40%,#1817161a 78%),linear-gradient(180deg,#18171645,transparent 32%,#18171675)}
+.keyboard-home .feature-progress>span{background:#ef8d50}
+.keyboard-home .feature-card-label{background:#f3ead324;border-color:#fff5dd59;box-shadow:inset 0 1px 0 #fff7e740,0 5px 12px #0002}
+.keyboard-home .feature-card-label>strong{color:#fffaf1;text-shadow:0 1px 4px #0007}
+@media(max-width:700px){.keyboard-home .feature-showcase[data-cover-kind="concept"] .feature-shade{background:linear-gradient(180deg,#181716a8 0%,#1817167a 46%,#18171618 75%,#18171675)}}
+#main:focus{outline:none}
+/* Warm ivory material for the two pale keycaps. */
+.keyboard-home .key-button:not(.key-orange):not(.key-dark) .key-model{--key-top-light:#fffefb;--key-top-dark:#f3f2f1;--key-side-light:#ecebea;--key-side-dark:#a7a6a5;--key-text:#343332}
+.keyboard-home .key-button:not(.key-orange):not(.key-dark) .key-top{box-shadow:inset 2px 3px 3px #fffffce0,inset -2px -3px 6px #6867661c,0 0 1px #6b6a6980}
+.keyboard-home .key-button:not(.key-orange):not(.key-dark) .key-top::before{background:linear-gradient(145deg,#fffffc00,#89888705 45%,#fffefa40);box-shadow:inset 0 2px 9px #73727110,inset 0 -2px 3px #fffef9a0}
+.keyboard-home .feature-cover-credit[hidden]{display:none!important}
+/* A uniform 60% black layer across every featured background. */
+.keyboard-home .feature-showcase[data-cover-kind] .feature-shade{background:rgba(0,0,0,.6)}
+.keyboard-home .feature-card-label{background:none;border:0;border-radius:0;box-shadow:none;backdrop-filter:none;-webkit-backdrop-filter:none;padding:0;left:14px;right:14px;bottom:18px}
+@media(max-width:700px){.keyboard-home .feature-card-label{left:10px;right:10px;bottom:12px;padding:0}}
+/* Near-white milk surfaces with neutral grey relief. */
+:root{--ink:#292a2b;--muted:#747577;--soft:#f3f3f1;--line:#dededb;background:#fafaf8}body{background:#fafaf8}.site-header{background:#fafaf8ed;border-bottom-color:#dededb80}.keyboard-home{--matte:#f7f7f5;--matte-ink:#2c2d2e;--matte-muted:#797a7b;--raised:9px 9px 24px #b5b6b837,-9px -9px 24px #ffffffed}.keyboard-home .entrance-wrap{background:#f0f0ee}.keyboard-home .entrance-shell{background:radial-gradient(ellipse at 20% 10%,#ffffffcf,transparent 55%),radial-gradient(ellipse at 87% 80%,#e6e7e580,transparent 48%),#f8f8f6;box-shadow:12px 12px 30px #aeb0b13d,-10px -10px 26px #ffffffd9,inset 1px 1px 2px #fff}.keyboard-home .home-introduction,.keyboard-home .home-contact-screen{background:radial-gradient(ellipse at 10% 20%,#ffffffbf,transparent 55%),radial-gradient(ellipse at 90% 80%,#e8e9e780,transparent 55%),#f7f7f5}.keyboard-home .key-button:not(.key-orange):not(.key-dark) .key-model{--key-top-light:#fffffd;--key-top-dark:#e9eae7;--key-side-light:#dadbd8;--key-side-dark:#a7a9a6;--key-text:#333536}
+/* Site surface sampled from the approved light collaboration cover. */
+:root{--milk-base:#f8f5f0;--milk-surface:linear-gradient(115deg,#faf6ed,#f5f4f3);--soft:#f3f1ed;--line:#dedbd5;background:var(--milk-base)}body{background:var(--milk-surface);background-attachment:fixed}.site-header{background:#f8f5f0ed;border-bottom-color:#dedbd580}.keyboard-home{--matte:var(--milk-base)}.keyboard-home .entrance-wrap{background:#efede8}.keyboard-home .entrance-shell,.keyboard-home .home-introduction,.keyboard-home .home-contact-screen{background:var(--milk-surface)}.card-media,.archive-section .card-media,.gallery-button,.contact-card{background:#f1efeb}.contact-band,.capabilities{background:var(--milk-surface)}.keyboard-home .profile-story,.keyboard-home .profile-capabilities{background:linear-gradient(135deg,#ffffff70,#faf6ed33)}

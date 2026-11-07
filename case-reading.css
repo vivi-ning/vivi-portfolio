@@ -1,0 +1,33 @@
+.readable-case .project-intro{max-width:990px;padding-bottom:40px}
+.readable-case .project-intro h1{font-size:clamp(34px,4.3vw,60px);line-height:1.32;font-weight:380;letter-spacing:-1.6px}
+.readable-case .project-intro>p:not(.eyebrow){font-size:18px;line-height:1.9;max-width:760px;color:#6c6b6a}
+.readable-case .project-intro>.case-plan-label{display:inline-block;font-size:12px!important;margin-top:24px;padding:9px 14px;background:#f4f3f2;border-radius:8px;color:#6c6b6a!important}
+.readable-case .project-meta{gap:65px;padding-top:23px;border-top:1px solid #ecebea}
+.readable-case .project-cover{border:1px solid #f1f0ef;background:#f6f5f4}
+.readable-case .project-cover img{max-height:620px}
+.case-reading{padding-top:30px}
+.case-chapter{display:grid;grid-template-columns:200px minmax(0,1fr);gap:55px;padding:56px 0;border-bottom:1px solid #ecebea}
+.case-chapter-heading{display:flex;gap:18px;align-items:baseline;padding-top:8px}
+.case-chapter-number{font-size:11px;color:#bd572a;letter-spacing:1px}
+.case-chapter-heading>p{font-size:13px;color:#787776}
+.case-chapter-body{max-width:825px;min-width:0}
+.case-chapter-body h2{font-size:32px;font-weight:370;line-height:1.5;letter-spacing:-.6px;margin-bottom:21px;color:#292827}
+.case-body-text{font-size:17px;line-height:2;color:#61605f;max-width:740px;text-wrap:pretty}
+.case-bullets{list-style:none;padding:0;margin:24px 0 0;display:grid;gap:14px}
+.case-bullets>li{position:relative;padding-left:19px;font-size:16px;line-height:1.9;color:#61605f}
+.case-bullets>li::before{content:'';position:absolute;left:0;top:.85em;width:5px;height:5px;background:#d36b39;border-radius:50%}
+.case-facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 30px;margin:30px 0 0;padding:24px 27px;border:1px solid #ffffffc4;border-radius:18px;background:#f6f5f466;box-shadow:5px 5px 16px #c4c3c226,-5px -5px 16px #ffffffa6}
+.case-facts dt{font-size:11px;color:#848382;margin-bottom:8px}.case-facts dd{margin:0;font-size:15px;line-height:1.8;color:#4a4948}
+.case-table-wrap{margin-top:28px;border:1px solid #ebeae9;border-radius:15px;overflow:hidden;background:#fbf9f3}
+.case-table{width:100%;border-collapse:collapse;table-layout:auto;font-size:14px;line-height:1.85}
+.case-table caption{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
+.case-table th{text-align:left;font-weight:500;padding:15px 18px;background:#f4f3f2;color:#656463;font-size:12px;white-space:nowrap}
+.case-table td{padding:17px 18px;border-top:1px solid #f0efee;vertical-align:top;color:#575655}
+.case-table td:first-child{min-width:115px;color:#31302f}
+.case-table tbody tr:nth-child(even){background:#f9f8f766}
+.readable-case .gallery-heading h2{font-size:33px;font-weight:370}
+.source-pages-hint{font-size:13px;color:#777675;margin:0 0 24px;line-height:1.9}
+.readable-case .source-pages{padding:25px;background:#f5f4f377;border:1px solid #f0efee;border-radius:18px}
+.readable-case .source-pages summary{font-size:14px}
+@media(max-width:1000px){.case-chapter{grid-template-columns:130px minmax(0,1fr);gap:30px;padding:42px 0}.case-chapter-body h2{font-size:28px}.case-body-text{font-size:16px}.case-bullets>li{font-size:15px}.case-table td,.case-table th{padding:14px 12px}}
+@media(max-width:700px){.readable-case .project-intro h1{font-size:34px;letter-spacing:-.8px}.readable-case .project-intro>p:not(.eyebrow){font-size:16px}.readable-case .project-meta{gap:22px}.case-reading{padding-top:6px}.case-chapter{grid-template-columns:1fr;gap:16px;padding:35px 0}.case-chapter-heading{padding:0}.case-chapter-body h2{font-size:26px;margin-bottom:17px}.case-body-text{font-size:16px;line-height:1.95}.case-facts{padding:19px;gap:19px;grid-template-columns:1fr}.case-facts dd{font-size:14px}.case-table thead{display:none}.case-table,.case-table tbody{display:block}.case-table tr{display:grid;padding:16px 17px;gap:9px;border-top:1px solid #ecebea}.case-table tr:first-child{border-top:0}.case-table td{display:grid;grid-template-columns:75px minmax(0,1fr);gap:12px;padding:0;border:0;min-width:0!important;font-size:14px}.case-table td::before{content:attr(data-label);font-size:11px;color:#868584;padding-top:2px}.readable-case .gallery-heading h2{font-size:27px}.readable-case .source-pages{padding:19px}}
