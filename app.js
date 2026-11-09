@@ -8,7 +8,7 @@ const scrollPositions=new Map();
 let currentRoute='',projectOrigin='#works',galleryItems=[],galleryIndex=0;
 history.scrollRestoration='manual';
 
-function picture(src,alt,priority=false){const info=window.ASSET_INFO?.[src];return `<img src="${esc(src)}" alt="${esc(alt)}" ${info?`width="${info.width}" height="${info.height}"`:''} ${priority?'fetchpriority="high" loading="eager"':'loading="lazy"'} decoding="async">`}
+function picture(src,alt,priority=false){const info=window.ASSET_INFO?.[src],preview=window.IMAGE_PREVIEWS?.[src];const source=preview?preview.small:src;const responsive=preview?`srcset="${esc(preview.small)} ${preview.smallWidth}w, ${esc(preview.wide)} ${preview.wideWidth}w" sizes="(max-width:650px) 92vw, 50vw"`:'';return `<img src="${esc(source)}" ${responsive} alt="${esc(alt)}" ${info?`width="${info.width}" height="${info.height}"`:''} ${priority?'fetchpriority="high" loading="eager"':'loading="lazy"'} decoding="async">`}
 function orderedProjects(){const order=[0,14,1,2,3,4,5,6,7,9,10,11,12,13];return order.map(id=>PROJECTS[id]).filter(p=>p&&!p.mergedInto)}
 function projectOrdinal(p){return String(orderedProjects().findIndex(x=>x.id===p.id)+1).padStart(2,'0')}
 function card(p){return `<a class="project-card" href="#project/${p.id}"><div class="card-media">${picture(p.archiveCover||p.cover,p.title)}<span class="card-arrow" aria-hidden="true">↗</span></div><div class="card-info"><p class="eyebrow">${esc(p.category)} / ${projectOrdinal(p)}</p><h3>${esc(p.title)}</h3><p>${esc(p.description.replace(/^策划方案｜/,''))}</p></div></a>`}

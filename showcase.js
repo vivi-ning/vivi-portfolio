@@ -70,8 +70,7 @@ function setupShowcase(){
   transition.finished.then(finish).catch(()=>{if(!disposed)finish()});
  }
 
- paintBackground();paintContent();updateToggle();
- FEATURED.forEach(id=>{const image=new Image();image.src=showcaseArt(PROJECTS[id])});
+ let coversLoaded=false;const coverObserver=new IntersectionObserver(entries=>{if(entries.some(e=>e.isIntersecting)){coversLoaded=true;paintBackground();paintContent();updateToggle();coverObserver.disconnect()}},{rootMargin:'300px 0px'});coverObserver.observe(root);
  root.querySelector('.feature-prev').addEventListener('click',()=>select((pending?.index??index)-1));root.querySelector('.feature-next').addEventListener('click',()=>select((pending?.index??index)+1));
  toggle.addEventListener('click',()=>{wantAuto=!wantAuto;showcaseAutoPreference=wantAuto;if(wantAuto){hovered=false;focused=false}schedule()});
  root.addEventListener('pointerenter',e=>{if(e.pointerType!=='touch'){hovered=true;schedule()}});root.addEventListener('pointerleave',()=>{hovered=false;schedule()});
@@ -80,5 +79,5 @@ function setupShowcase(){
  root.addEventListener('pointerdown',e=>{if(e.pointerType==='touch')touch={x:e.clientX,y:e.clientY}});root.addEventListener('pointercancel',()=>touch=null);root.addEventListener('pointerup',e=>{if(!touch)return;const dx=e.clientX-touch.x,dy=e.clientY-touch.y;touch=null;if(Math.abs(dx)>45&&Math.abs(dx)>Math.abs(dy)*1.3){suppressClickUntil=performance.now()+350;select((pending?.index??index)+(dx<0?1:-1))}});root.addEventListener('click',e=>{if(performance.now()<suppressClickUntil){e.preventDefault();e.stopImmediatePropagation()}},true);
  const observer=new IntersectionObserver(entries=>{visible=entries[0].isIntersecting&&entries[0].intersectionRatio>=.35;schedule()},{threshold:.35});observer.observe(root);
  const visibility=()=>schedule(),preference=()=>{if(reduce.matches){wantAuto=false;animations.forEach(a=>a.finish())}schedule()};document.addEventListener('visibilitychange',visibility);reduce.addEventListener('change',preference);
- showcaseCleanup=()=>{disposed=true;stopClock();observer.disconnect();animations.forEach(a=>a.cancel());root.querySelectorAll('.feature-zoom,.feature-copy-exit').forEach(el=>el.remove());document.removeEventListener('visibilitychange',visibility);reduce.removeEventListener('change',preference)};
+ showcaseCleanup=()=>{disposed=true;stopClock();observer.disconnect();coverObserver.disconnect();animations.forEach(a=>a.cancel());root.querySelectorAll('.feature-zoom,.feature-copy-exit').forEach(el=>el.remove());document.removeEventListener('visibilitychange',visibility);reduce.removeEventListener('change',preference)};
 }
