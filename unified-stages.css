@@ -53,3 +53,19 @@
 
 .keyboard-home .feature-showcase>.feature-top-actions{position:absolute;left:5vw;bottom:clamp(30px,5.2svh,60px);z-index:5;margin:0}.keyboard-home .feature-controls{pointer-events:none}.keyboard-home .feature-controls button{pointer-events:auto}.feature-cover-credit{display:none!important}
 @media(max-width:700px){.keyboard-home .feature-showcase>.feature-top-actions{left:23px;bottom:28px}}@media(max-width:400px){.keyboard-home .feature-showcase>.feature-top-actions{left:20px;bottom:21px}}
+
+/* Give the active artwork its own space above a quieter preview rail. */
+.keyboard-home .feature-card-rail{padding:0;margin:0;filter:none;background:none;box-shadow:none;clip-path:inset(-18px 0 -24px -18px);overflow:visible}
+.keyboard-home .feature-card{box-shadow:0 6px 14px -7px #00000055;border-color:#ffffff50}
+.keyboard-home .feature-card:hover{box-shadow:0 9px 18px -8px #00000066}
+@media(min-width:701px){
+ .keyboard-home .feature-layout{inset:0;display:block}
+ .keyboard-home .feature-copy{position:absolute;left:5vw;top:37%;width:31%;max-width:480px}
+ .keyboard-home .feature-card-rail{position:absolute;left:55%;right:5vw;bottom:clamp(100px,14svh,145px);align-self:auto;--rail-gap:14px}
+ .keyboard-home .feature-card{height:clamp(170px,28svh,260px)}
+ .keyboard-home .feature-card-label{left:12px;right:10px;bottom:13px}
+ .keyboard-home .feature-card-label>strong{font-size:clamp(10px,1vw,14px);line-height:1.45}
+ .keyboard-home .feature-card-label>span{font-size:7px;margin-bottom:6px}
+ .keyboard-home .feature-description{max-width:340px}
+}
+@media(max-width:700px){.keyboard-home .feature-card-rail{clip-path:inset(-12px 0 -18px -12px)}.keyboard-home .feature-card{box-shadow:0 5px 10px -6px #0006}}
