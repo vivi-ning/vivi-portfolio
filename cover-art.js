@@ -5,5 +5,5 @@ const SHOWCASE_COVERS={
  2:{src:'assets/white-crane-showcase.jpg',focus:'80% center',kind:'original'},
  0:{src:'assets/generated-covers/magicfix-wide-v2.webp',focus:'50% center',kind:'concept'}
 };
-function showcaseArt(project){const src=SHOWCASE_COVERS[project.id]?.src||project.cover;return window.IMAGE_PREVIEWS?.[src]?.wide||src}
+function showcaseArt(project,thumbnail=false){const src=SHOWCASE_COVERS[project.id]?.src||project.cover;const preview=window.IMAGE_PREVIEWS?.[src];return preview?(thumbnail?preview.small:matchMedia('(max-width:700px)').matches?(preview.mobile||preview.small):preview.wide):src}
 function showcaseArtFocus(project){return SHOWCASE_COVERS[project.id]?.focus||'center'}
